@@ -5,7 +5,7 @@ sidebarDepth: 2
 ## 基础算法(一)
 
 ### 找出数组最大值
-``` js
+```js
 1.es6拓展运算符...
     Math.max(...arr)
 2.es5 apply(与方法1原理相同)
@@ -26,7 +26,7 @@ sidebarDepth: 2
     })
 ```
 ### 去重
-``` js
+```js
 1. reduce和includes
 var arr=["1","1","3","4","2"];
   newArr=arr.reduce((a,b)=>{
@@ -107,7 +107,7 @@ function removeDuplicate(arr){
 console.log(removeDuplicate([1,3,3,3,1,5,6,7,8,1])) // [1,3,5,6,7,8]
 ```
 ### 删除重复的字符
-``` js
+```js
 function removeDuplicateChar(str){
   if (!str || str.length < 2 || typeof str != "string") {
 　  return;
@@ -131,7 +131,7 @@ function removeDuplicateChar(str){
 console.log(removeDuplicateChar("Learn more javascript dude"));
 ```
 ### 每隔一秒输出数组的一项
-``` js
+```js
 var arr = ["1", "5", "3", "4", "2"],i=0;
 var t=setInterval('show()',2000)
 function show(){
@@ -149,7 +149,7 @@ function show(){
   - 遍历这个对象，比较每一个键值对的值，取最大的键值对，即得到字符串出现最多的字符和出现的次数。
 :::
 
-``` js
+```js
 var str = 'aabbccddd';
 var obj = {}; /* 定义一个空的对象来接收结果 */
 for (var i = 0; i < str.length; i++) {
@@ -179,13 +179,13 @@ for (var k in obj) {
 console.log(max + ' ' + maxno);
 ```
 ### 数组扁平化处理
-``` js
+```js
 let tempArr = [1,[2,3],[4,5,[6,7]]];
 let result_str1 = tempArr.join(',').split(',');
 console.log(result_str1); //  ["1", "2", "3", "4", "5", "6", "7"]
 ```
 ### JS 如何从一个length为12的数组中按顺序取每5个元素为一组放到新数组中，最后不够5个的也存为一个数组
-``` js
+```js
 var arr = [1,2,3,4,5,6,7,8,9,10,11,12];
 console.log(newArrFn(5,arr))
 function newArrFn(n,arr) {
@@ -210,7 +210,7 @@ function chunk(arr,size ) {
 chunk(["a", "b", "c", "d"], 3);
 ```
 ### 找出数组中不重复的元素，并输出最小的值
-``` js
+```js
 /*var a = ["span","span","strong","span","b"];*/
 var a = [1,2,3,1,2,4];
 function norepeat(a) {
@@ -240,7 +240,7 @@ console.log(norepeat(a), Math.min.apply(null, norepeat(a))
   - 如果这个数不能被3~它的平方根中的任一数整除，m必定是素数。而且除数可以每次递增2(排除偶数)
 :::
 
-``` js
+```js
 function isPrime(num){
   if (num === 2 || num === 3) {
 　　return true;
@@ -265,7 +265,7 @@ console.log(isPrime(30)); // false
   除数 在a和b的范围内，如果同时a和b处以除数的余等于0，就将此时的除数赋值给res;除数自增，不断循环上面的计算，更新res。
 :::
 
-``` js
+```js
 解法1：
   function greatestCommonDivisor(a, b){
 　  let divisor = 2,res = 1;
@@ -316,7 +316,7 @@ function mergeSortedArr(a,b){
 console.log(mergeSortedArr([2,5,6,9], [1,2,3,29])) // [1,2,2,3,5,6,9,29]
 ```
 ### 字符串反向
-``` js
+```js
 最简单的方法：
 function reverse(str){
   let resStr = "";
@@ -365,7 +365,7 @@ function reverseInPlace(str){
 console.log(reverseInPlace('I am the good boy'));
 ```
 ### 判断是否是回文
-``` js
+```js
 function isPalindrome(str){
   if (!str || str.length < 2) {
   return;
@@ -385,7 +385,7 @@ eg：在一个未排序的数组中找出是否有任意两数之和等于给定
 - 循环遍历数组，let subStract = num - arr[i];
 - 如果 differ[subStract] 里有值，则返回true;如果没有，将 differ[arr[i]] 置为 true。
 :::
-``` js
+```js
 function sumFind(arr,num){
   if (!arr || arr.length < 2) {
     return;
@@ -404,7 +404,7 @@ function sumFind(arr,num){
 console.log(sumFind([6,4,3,2,1,7], 9)); // true
 ```
 ### 连字符转成驼峰
-``` js
+```js
 如：get-element-by-id 转为 getElementById
 let str = 'get-element-by-id';
 let arr = str.split('-');
@@ -414,7 +414,7 @@ for(let i=1; i < arr.length; i++){
 console.log(arr.join('')); // getElementById
 ```
 ### 用正则实现trim() 清除字符串两端空格
-``` js
+```js
 String.prototype.trim1 = function(){
   // return this.replace(/\s*/g,""); // 清除所有空格
   return this.replace(/(^\s*)|(\s*$)/g,""); // 清除字符串前后的空格
@@ -425,7 +425,7 @@ console.log(" hello word ".trim1()) // "hello word"
 ::: tip 思路分析
   将字符串切割成数组再反转，遍历数组，加入辅助数组，当数组长度为3的倍数，再向辅助数组加入 ","。
 :::
-``` js
+```js
 function RMB(str){
   let arr = str.split("").reverse();
   let res = [];
@@ -440,7 +440,7 @@ function RMB(str){
 console.log(RMB("12345678"))
 ```
 ### 删除相邻相同的字符串
-``` js
+```js
 function delSrt(str){
   let res = [], nowStr;
   for(let i = 0; i < str.length; i ++){

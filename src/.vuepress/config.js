@@ -8,7 +8,7 @@ module.exports = {
     '/': {
       lang: 'zh-CN',
       title: '前端知识点总结',
-      description: '任何不能够给你快乐的编程都是耍流氓'
+      description: '故立志者，为学之心也；为学者，立志之事也。'
     }
   },
   head: [
@@ -78,6 +78,7 @@ module.exports = {
             text: '经典面试题',
             items: [
               { text: '面试必看', link: '/zh/interview/index.md'},
+              { text: '常见面试经', link: '/zh/interview/learnAll.md'},
               { text: '阿里巴巴', link: '/zh/interview/ali.md'},
               { text: '三年前端', link: '/zh/interview/threeYear.md'},
               // { text: '龙湖地产', link: '/zh/interview/longhu.md'}

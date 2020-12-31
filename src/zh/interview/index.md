@@ -62,13 +62,14 @@ sidebarDepth: 2
 
 ## 项目
 - 开发周期
-- 项目、bug管理工具,Teambition,禅道，TAPD
-- 前后端对接及联调， showDoc
+- 项目、bug管理工具,Teambition,禅道，TAPD,jira
+- 前后端对接及联调， showDoc,语雀，飞书
 - 工作流程及团队协助
 - 多环境配置（本地，测试，预发布，线上）
 - 打包上线
 - CDN与缓存
 - 数据埋点与追踪，百度统计，诸葛IO，秒针
 - Bug自动上报，Sentry
+- 代码质量检查工具 Sonar
 - 持续集成， Jenkins
 - 第三方SDK的使用（短信验证码，邮件服务器，客服，支付，地图，微信SDK，JSBridge）

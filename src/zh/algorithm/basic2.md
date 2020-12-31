@@ -4,7 +4,7 @@ sidebarDepth: 2
 ---
 ## 基础算法(二)
 ### 斐波那契 (递归)
-``` js
+```js
 function fibonacci(n){
   if (n <= 0) {
     return 0;
@@ -40,7 +40,7 @@ console.log(fibonacci(5));
 2. 如果目标元素大于或者小于中间元素，则在数组大于或小于中间元素的那一半区域查找（目标元素大于中间元素，从中间元素的右侧查询，否组左边），然后重复第一步的操作。
 3. 如果某一步数组为空，则表示找不到目标元素。
 :::
-``` js
+```js
 // 非递归
 function binary_search(arr, key) {
   var low = 0,
@@ -82,7 +82,7 @@ var arr = [1,2,3,4,5,6,7,8,9,10,11,23,44,86];
 var result = binary_search(arr, 0, 13, 10);
 ```
 ### 加油站问题-贪心算法
-``` js
+```js
 一辆汽车加满油后可行驶n公里。旅途中有若干个加油站。设计一个有效算法，指出应在哪些加油站停靠加油，使沿途加油次数最少。对于给定的n(n <= 5000)和k(k <= 1000)个加油站位置，编程计算最少加油次数。并证明算法能产生一个最优解。
 
 要求：无锡人流医院哪家好 http://www.bhnnkyy120.com/
@@ -120,7 +120,7 @@ console.log(greedy(7,7,arr)) // 4
 2. 排除了因为正在进行会议而无法进行的会议(now > obj[i].start);
 3. 会议能举行，则 res++，并且更新目前时间now (now = obj[i].end;)。
 :::
-``` js
+```js
 function getMostCount(obj){
   if (!obj || obj.length < 1) {
   return;
@@ -158,7 +158,7 @@ console.log("最大场次：" + getMostCount(obj));
 2. 明确递归结束的条件(base case)：n == 1
 3. 其他过程：from：来源地;to：目的地;help：辅助。
 :::
-``` js
+```js
 function hanoiProcess(n,from,to,help){
   if (n < 1) {
     return;
@@ -187,7 +187,7 @@ Move 1 from 左 to 右
 2. 因为新生的母牛，只有等到第四年才能生小母牛。所以前4年，只有原来的一头母牛每年生一头。
 3. 第五年以后，除了有前一年的牛数量，还有三年前的牛可以生新的小牛。(最近3年内生的牛还不能生)
 :::
-``` js
+```js
 function cow(n){
   if (n < 1) {
     return;

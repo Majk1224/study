@@ -9,33 +9,43 @@ sidebarDepth: 2
 ### Git环境
 - [安装和公钥/私钥的配置](https://www.cnblogs.com/joyho/articles/4062574.html)
 - [常用命令](https://github.com/Majk1224/project)
-- 提交之前需要配置全局用户和密码，git commit的时候需要  
-``` js
-git config --global user.name "your name"  
-git config --global user.email "you email"
-```
-- 常用命令
-``` js
-- 克隆仓库：git clone git@github.com:mjk/project.git
-- 拉取代码：git pull origin master
-- 新建分支：git branch majinkai
-- 删除分支：git branch -d majinkai
-- 切换分支：git checkout majinkai
-- 推送远程：git push origin master
-- 查看提交记录：git log 
+``` bash
+- 克隆仓库： git clone git@github.com:mjk/project.git
+- 拉取代码： git pull origin master
+- 新建分支： git branch majinkai
+- 删除分支： git branch -d majinkai
+- 切换分支： git checkout majinkai
+- 推送远程： git push origin master
+- 查看提交记录： git log 
 - 回滚代码： git reset --hard [commit:6]
 - 回滚文件： git checkout -- filepath
-- 回到最新代码：git reset HEAD | git pull origin master
+- 回到最新代码： git reset HEAD | git pull origin master
 - 隐藏当前分支改动： git stash 
-- 回退隐藏：git stash pop
-- 合并分支：git merge majinkai
+- 回退隐藏： git stash pop
+- 合并分支： git merge majinkai
 - 会用PR给他人仓库贡献代码
+```
+- 提交之前需要配置全局用户和密码，git commit的时候需要  
+```bash
+git config --global user.name "your name"  
+git config --global user.email "you email"
 ```
 ### Node环境
 - [安装教程](https://www.cnblogs.com/zhouyu2017/p/6485265.html)
 - 可以查看到node版本和npm版本即可
+- 安装使用nrm管控仓库源
+```bash
+// 安装
+npm i -g nrm
+// 添加自定义源地址, 其中 yynpm 为自定义名称
+nrm add yynpm 源地址
+// 查看仓库源列表
+nrm ls
+// 切换 npm 仓库源
+nrm use yynpm
+```
 - cnpm配置
-``` js
+``` bash
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 - 进阶：可以使用[nvm](https://github.com/creationix/nvm)管理window上的node版本
@@ -49,30 +59,30 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 ### mac推荐终端安装
 
 - HomeBrew [安装](https://brew.sh/)（mac上的软件上的包管理工具）或执行命令安装
-``` js
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+``` bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 执行如果遇到 [Connection refused](#ConnectionRefused)，参见下面的处理方式 
 ### iterm2 
 - [iterm2安装](https://iterm2.com/)
 ### ZSH 安装
 
-``` js
+``` bash
 1. brew install zsh
 2. zsh --version (如果返回正确的版本号即代表安装成功)
    zsh 5.8 (x86_64-apple-darwin20.0)
 3. 将 zsh 设置为系统的默认 shell
 ```
 Recent Mac OS versions:
-``` js
+``` bash
 chsh -s /usr/local/bin/zsh
 ```
 Mac OS High Sierra and before:
-``` js
+``` bash
 chsh -s /bin/zsh
 ```
 ### Oh My Zsh 安装
-``` js
+``` bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # or
@@ -85,12 +95,12 @@ oh my zsh 有很多主题可安装折腾，有兴趣的可参见 https://github.
 #### 插件安装
    autojump
 用于自动跳转之前访问的文件夹，比如本机有个 ~/Codes/leopard-web-app-custom 项目文件夹，进入过一次后，下次在任意目录下输入关键词，比如j app-cus 后 Tab 键会自动补齐__ 下划线, 然后回车即可进入 ~/Codes/leopard-web-app-custom，方便快捷。
-``` js
+``` bash
 brew install autojump
 ```
 - tig 更强大的 git 命令行工具
 [更多使用方法文档](https://jonas.github.io/tig/)
-``` js
+``` bash
 brew install tig
 
 个别使用方法示例：
@@ -99,7 +109,7 @@ brew install tig
 • 输入tig 后，选中指定的提交记录信息行，按 t 可查看当前提交记录状态下各文件的信息
 ```
 - zsh-autosuggestions (输入命令提示自动完成插件)
-``` js
+``` bash
 brew install zsh-autosuggestions
 ```
 以上插件完成后，进入 oh-my-zsh 的配置文件 ~/.zshrc 文件中，找到 plugins= 字段所在行，将相关插件添加进去。
@@ -110,7 +120,7 @@ brew install zsh-autosuggestions
 - alias 的使用
 .zshrc 文件中可以定义 alias，这样就可以做到输入简单字符串执行指定命令的操作行为，简化输入命令
 比如：我想登陆通过ssh 登陆服务器，正常执行时 ssh jinlong@47.107.105.88 -p 60022， 这是我可以定义个alias 为：
-``` js
+``` bash
 alias sh88="ssh jinlong@47.107.105.88 -p 60022"
 ```
 保存后，source ~/.zshrc 。再在命令行就可直接输入 sh88 即可执行 ssh 登陆命令
