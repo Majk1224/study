@@ -10,7 +10,9 @@
     "dev": "node bin/vuepress dev src",
     "build": "node bin/vuepress build src",
     "lint": "eslint --fix --ext .js,.vue bin/ lib/ test/",
-    "deploy-gh": "yarn build && bash scripts/deploy-gh.sh",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh",
+    "deploy-gh": "npm build && bash scripts/deploy-gh.sh",
     "prepublishOnly": "conventional-changelog -p angular -r 2 -i CHANGELOG.md -s",
     "release": "/bin/bash scripts/release.sh",
     "test": "node test/prepare.js && jest --config test/jest.config.js"
@@ -109,6 +111,7 @@
     "jest-serializer-vue": "^1.0.0",
     "lint-staged": "^7.0.4",
     "vue-jest": "^2.6.0",
+    "vuepress": "^1.7.1",
     "vuepress-theme-vue": "^1.1.0",
     "yorkie": "^1.0.3"
   },
