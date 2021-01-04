@@ -137,7 +137,7 @@ alias sh88="ssh jinlong@47.107.105.88 -p 60022"
 
 - 修改自己电脑的 /ets/hosts 配置，将 raw.githubusercontent.com 及查询到的 IP 地址添加进去
   
-  ![addIp](/study/addIp.png)
+  ![addIP](/study/addIP.png)
 
 - 再次执行相关的 curl 命令即可成功
 ### VSCode
