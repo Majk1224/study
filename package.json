@@ -12,7 +12,7 @@
     "lint": "eslint --fix --ext .js,.vue bin/ lib/ test/",
     "docs:build": "vuepress build docs",
     "deploy": "bash deploy.sh",
-    "deploy-gh": "npm build && bash scripts/deploy-gh.sh",
+    "deploy-gh": "npm run build && bash scripts/deploy-gh.sh",
     "prepublishOnly": "conventional-changelog -p angular -r 2 -i CHANGELOG.md -s",
     "release": "/bin/bash scripts/release.sh",
     "test": "node test/prepare.js && jest --config test/jest.config.js"
