@@ -44,7 +44,7 @@ nrm ls
 # 切换 npm 仓库源
 nrm use yynpm
 ```
-- cnpm配置
+- 或者使用 cnpm
 ``` bash
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
