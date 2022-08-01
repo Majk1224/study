@@ -33,15 +33,15 @@ git config --global user.email "you email"
 ### Node环境
 - [安装教程](https://www.cnblogs.com/zhouyu2017/p/6485265.html)
 - 可以查看到node版本和npm版本即可
-- 安装使用nrm管控仓库源
+- 推荐安装 nrm（nrm 是一个 npm 源管理器，允许你快速地在 npm源间切换）
 ```bash
-// 安装
+# 安装
 npm i -g nrm
-// 添加自定义源地址, 其中 yynpm 为自定义名称
+# 添加自定义源地址, 其中 yynpm 为自定义名称
 nrm add yynpm 源地址
-// 查看仓库源列表
+# 查看仓库源列表
 nrm ls
-// 切换 npm 仓库源
+# 切换 npm 仓库源
 nrm use yynpm
 ```
 - cnpm配置
@@ -137,7 +137,7 @@ alias sh88="ssh jinlong@47.107.105.88 -p 60022"
 
 - 修改自己电脑的 /ets/hosts 配置，将 raw.githubusercontent.com 及查询到的 IP 地址添加进去
   
-  ![addIP](/study/addIP.png)
+  ![addIP](/study/addIp.png)
 
 - 再次执行相关的 curl 命令即可成功
 ### VSCode

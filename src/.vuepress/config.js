@@ -8,7 +8,7 @@ module.exports = {
     '/': {
       lang: 'zh-CN',
       title: '前端知识点总结',
-      description: '故立志者，为学之心也；为学者，立志之事也。'
+      description: '让编码像 1 + 1 一样简单'
     }
   },
   head: [
