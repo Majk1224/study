@@ -13,7 +13,7 @@ Math.cbrt()|用于计算一个数的立方根
 Math.trunc()|用于去除一个数的小数部分，返回整数
 
 
-```
+```js
 1、如果参数类型不是数值，Number.isFinite一律返回false
 2、如果参数类型不是NaN，Number.isNaN一律返回false
 注:es5含有隐式转换，es6不含有隐式转换
@@ -109,7 +109,7 @@ Math.cbrt('hello') // NaN
 - 回调里面使用箭头函数，this指向上级对象
 - 回调里面使用function,this指向当前对象
 
-```
+```js
  // es5
  let fun = function(val){
     var val = val || 666;
@@ -172,7 +172,7 @@ Math.cbrt('hello') // NaN
 - 可以展开一个数组
 #### 3、伪逗号
 - es2017允许你去写一个逗号
-```
+```js
 let obj = {
     name:'zs',
     age:18,
@@ -180,7 +180,7 @@ let obj = {
 ```
 #### 4、数组的扩展
 
-```
+```js
 1、扩展运算符
 // 将数组转化为数组项的参数系列
 let arr1 = [1,2,3,4];
@@ -246,7 +246,7 @@ let result = Array.from(res); // 转数组
 ```
 #### 5、this指向
 
-```
+```js
 构造器 === 构造函数
 1、箭头函数不是一个构造器，不可以实例化
 let fun = () => {
@@ -259,9 +259,8 @@ new fun()  // 报错
 
 #### 6、对象扩展
 
-```
+```js
 console.log(Object.is(123,'123')) // false
-
 
 1、Object.assign()  默认是浅拷贝
  // 3个参数是深度拷贝  Object.assign({},obj1,obj2)

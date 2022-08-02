@@ -30,7 +30,7 @@
 2. call // 立即执行
 3. bind   返回值：函数(不会执行)
 #### 7、react事件
-```
+```js
 e.currentTarget：绑定事件的dom
 e.target：触发事件的dom
 //阻止事件默认行为
@@ -48,7 +48,7 @@ e.stopPropagation();
 #### 10、按需加载
 封装一个loading组件
 
-```
+```js
 import React from 'react';
 import '../../scss/index.css';
 export default ()=>{
@@ -59,7 +59,7 @@ export default ()=>{
 ```
 样式
 
-```
+```css
 .load{
     width: 100%;
     height: 100%;
@@ -75,7 +75,7 @@ export default ()=>{
 ```
 react.config.js
 
-```
+```js
 // 引入路由按需加载的依赖
 import Loadable from 'react-loadable';
 
@@ -100,16 +100,16 @@ const Feilei = Loadable({
 ```
 #### 11、定位
 
-```
+```js
 // 点击的时候调用这个方法
 location(){  // 定位
-        let script = document.createElement('script');
-        script.src = 'http://pv.sohu.com/cityjson?ie=utf-8';
-        document.body.appendChild(script);
-        script.onload = ()=>{
-            this.setState({
-                city:window.returnCitySN.cname
-            })
-        }
+    let script = document.createElement('script');
+    script.src = 'http://pv.sohu.com/cityjson?ie=utf-8';
+    document.body.appendChild(script);
+    script.onload = ()=>{
+        this.setState({
+            city:window.returnCitySN.cname
+        })
     }
+}
 ```

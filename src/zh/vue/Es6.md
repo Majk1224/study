@@ -1,7 +1,7 @@
 # ES6
 #### 1、声明变量
 
-```
+```js
 // es5
 声明变量 var --- variable
 用大写的形式去声明常量:var PI = 3.14159255358;
@@ -32,7 +32,7 @@
 1. 解构不成功：声明了变量，没有赋值（undefined）
 1. 不完全解构
 
-```
+```js
 ES6允许按照一定模式，从数组和对象中提取值，对变量进行赋值，这被称作解构赋值 
 // 数组的解构赋值
 // es5
@@ -109,7 +109,7 @@ console.log(age)
 - Stage 4 - Finished (定案阶段)
 #### 5、字符串扩展
 
-```
+```js
 1、String.includes(string) 用来判断字符串中是否包含指定参数（string）
 2、String.startsWith(string) 字符串是否以XX开始
 3、String.endsWith(string) 字符串是否以XX开始

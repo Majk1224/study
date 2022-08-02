@@ -2,34 +2,37 @@
 sidebar: auto
 sidebarDepth: 2
 ---
-## 环境配置
-### 重装系统
+# 快速搭建开发环境
+## mac使用指南
+### 系统操作指南
+- [新手入门教程](https://zhuanlan.zhihu.com/p/38973863)
+- [Mac使用技巧大整合](https://zhuanlan.zhihu.com/p/89987302)
+### 高效软件
+- 快捷提示：CheatSheet
+- 远程控制：向日葵远程控制
+- 图片处理：Photoshop CC
+- 思维导图：XMind
+- 开发工具：VSCode
+- 翻墙梯子：ClashX 或者 [西游](https://xiyou4you.us/r/?s=19104010)
+- 抓包工具：Charles
+- 其他按照公司开发环境作合理配置即可
+## 三大环境
+### 系统环境
+- 能够流畅运行代码和调试
+- 卸载用不到的软件或重装系统
 - [系统下载](https://msdn.itellyou.cn/)
 
 ### Git环境
 - [安装和公钥/私钥的配置](https://www.cnblogs.com/joyho/articles/4062574.html)
-- [常用命令](https://github.com/Majk1224/project)
-``` bash
-- 克隆仓库： git clone git@github.com:mjk/project.git
-- 拉取代码： git pull origin master
-- 新建分支： git branch majinkai
-- 删除分支： git branch -d majinkai
-- 切换分支： git checkout majinkai
-- 推送远程： git push origin master
-- 查看提交记录： git log 
-- 回滚代码： git reset --hard [commit:6]
-- 回滚文件： git checkout -- filepath
-- 回到最新代码： git reset HEAD | git pull origin master
-- 隐藏当前分支改动： git stash 
-- 回退隐藏： git stash pop
-- 合并分支： git merge majinkai
-- 会用PR给他人仓库贡献代码
-```
 - 提交之前需要配置全局用户和密码，git commit的时候需要  
 ```bash
 git config --global user.name "your name"  
 git config --global user.email "you email"
 ```
+- [常用命令](https://github.com/Majk1224/project)
+
+![git操作](/study/security/gitcommnd.png)
+
 ### Node环境
 - [安装教程](https://www.cnblogs.com/zhouyu2017/p/6485265.html)
 - 可以查看到node版本和npm版本即可
@@ -51,8 +54,8 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 - 进阶：可以使用[nvm](https://github.com/creationix/nvm)管理window上的node版本
 
 
-## 开发工具
-### ConEmu安装
+## 开发工具（必备）
+### ConEmu安装（window 终端）
 - [安装教程](https://www.jianshu.com/p/264e75aef8bb)
 - 多个终端方便快速切换
 
@@ -63,9 +66,9 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 执行如果遇到 [Connection refused](#ConnectionRefused)，参见下面的处理方式 
-### iterm2 
+#### iterm2 
 - [iterm2安装](https://iterm2.com/)
-### ZSH 安装
+#### ZSH 安装
 
 ``` bash
 1. brew install zsh
@@ -81,7 +84,7 @@ Mac OS High Sierra and before:
 ``` bash
 chsh -s /bin/zsh
 ```
-### Oh My Zsh 安装
+#### Oh My Zsh 安装
 ``` bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -124,7 +127,7 @@ brew install zsh-autosuggestions
 alias sh88="ssh jinlong@47.107.105.88 -p 60022"
 ```
 保存后，source ~/.zshrc 。再在命令行就可直接输入 sh88 即可执行 ssh 登陆命令
-###  Connection refused<span id="ConnectionRefused"> 问题处理</span>
+####  Connection refused<span id="ConnectionRefused"> 问题处理</span>
 
  如果执行curl 命令发现遇到如下问题
 
@@ -142,12 +145,19 @@ alias sh88="ssh jinlong@47.107.105.88 -p 60022"
 - 再次执行相关的 curl 命令即可成功
 ### VSCode
 - [汉化教程](https://jingyan.baidu.com/article/7e44095377c9d12fc1e2ef5b.html)
+- 常用插件
+  - Live Server
+  - Git History
+  - Markdown All in One
+  - Vetur
+  - Beautify
+  - JavaScript and Typescript
 ### 抓包工具 Charles
 - [安装和破解](https://zhubangbang.com/charles-crack-version-free-download-and-install-tutorial.html)
 - [使用教程](http://www.cnblogs.com/jiayuchn-test/p/8875105.html)
-### 小飞机 ShadowSocks
-- [安装教程](https://gitman6.github.io/cshow/windows.html)
-- 使用以前的账号配置服务器
+<!-- ### 小飞机 ShadowSocks -->
+<!-- - [安装教程](https://gitman6.github.io/cshow/windows.html) -->
+<!-- - 使用以前的账号配置服务器 -->
 ### Chrome
 - 未翻墙，可以去[应用中心下载](https://pc.qq.com/detail/1/detail_2661.html) 或 [谷歌上网助手下载](http://googlehelper.net/)
 - 已翻墙，去官网下载安装，后续安装插件

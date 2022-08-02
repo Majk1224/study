@@ -2,7 +2,7 @@
 ##### 1、applyMiddleware
 - 方便调试，实时触发，线下使用
 
-```
+```js
 import {createStore，applyMiddleware} from 'redux';
 import reducers from './reducers';
 import Logger from 'redux-logger';
@@ -16,7 +16,7 @@ export default createStore(reducers, applyMiddleware(Logger))
 - 改变action
 - 同时会帮我们注入两个参数dispatch和getState
 - 在异步操作完成之后再触发dispatch操作
-```
+```js
 dispatch((dispatch, getState)=>{
     // getState可以获取全局的state
     dispatch({

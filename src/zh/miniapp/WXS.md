@@ -11,7 +11,7 @@
 
 ##### 页面渲染
 
-```
+```xml
 <!--wxml-->
 <wxs module="m1">
     var msg = "hello world";
@@ -28,7 +28,7 @@ hello world
 
 ##### 数据处理
 
-```
+```js
 // page.js
 Page({
   data: {
@@ -37,7 +37,7 @@ Page({
 })
 ```
 
-```
+```xml
 <!--wxml-->
 <!-- 下面的 getMax 函数，接受一个数组，且返回数组中最大的元素的值 -->
 <wxs module="m1">

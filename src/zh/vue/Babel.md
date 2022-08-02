@@ -5,17 +5,16 @@
 #### 2、配置
 - .babelrc
 
-```
-命令:
-    babel ./index.js -o ./_index.js
-下包：
-    cnpm install --save-dev babel-cli babel-preset-env
-    
-    
+```bash
+// 命令:
+  babel ./index.js -o ./_index.js
+// 下包：
+  cnpm install --save-dev babel-cli babel-preset-env
+   
 {
-    "presets": [
-        "env"
-    ]
+	"presets": [
+		"env"
+	]
 }
 
 babel-loader // es6转es5

@@ -19,7 +19,7 @@
 - 伪高阶函数
 - 4个参数
 
-```
+```js
 1、把redux中state映射成的props传递到组件中去   // 获取state数据
 const mapStatetoProps = (state,ownProps)=>{
     // state  redux存储的数据
@@ -76,7 +76,7 @@ const options = {
 
 ##### 6、combineReducers // 合并
 
-```
+```js
 import {combineReducers} from 'redux';
 import cart from './cart';
 import my from './my';

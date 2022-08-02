@@ -14,18 +14,18 @@
 **缺点**
 1. 无法取消
 
-```
+```js
 Promise.all()  会包装多个实例成为一个新的promise实例
 
-new Promise((resolve.reject) =>{
-    // do some async function
-    if(true){
-        // resolve 代表成功的回调
-        resolve(data);
-    }else{
-        // reject 代表失败的回调
-        reject(data);
-    }
+new Promise((resolve.reject) => {
+	// do some async function
+	if (true) {
+		// resolve 代表成功的回调
+		resolve(data);
+	} else {
+		// reject 代表失败的回调
+		reject(data);
+	}
 })
 ```
 #### 3、异步加载图片

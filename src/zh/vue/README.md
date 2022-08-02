@@ -20,7 +20,7 @@
 
 > 3、安装依赖包 npm install
 
-```
+```js
 下包：
     cnpm i --save-dev vue
 
@@ -87,7 +87,7 @@ let vm = new Vue({
 ```
 #### 2、app.vue
 
-```
+```js
 自动添加前缀
 postcss-loader
 autoprefixer
@@ -157,11 +157,11 @@ vue-style-loader
 - axios
 #### 4、取dom元素
 
-```
+```js
   ref="aaa"   this.$refs.aaa
 ```
 #### 6、轮播图 element-ui
-```
+```js
 main.js
 import Element from 'element-ui'
 
@@ -179,7 +179,7 @@ style
 ```
 #### 7、mock
 
-```
+```js
 下包：
     mock-axios-adapter
 
@@ -202,7 +202,7 @@ mock.onGet('地址').reply(200,{
 
 #### 8、vue-lazyload
 
-```
+```js
 1、安装插件
 npm install vue-lazyload --save-dev
 
@@ -219,7 +219,7 @@ Vue.use(VueLazyLoad,{
 ```
 #### 9、插槽
 
-```
+```xml
 <slot></slot>
 
 两端对齐：
@@ -228,7 +228,7 @@ vertival-align:sub
 ```
 #### 10、缓存页面
 
-```
+```html
 用这个标签包裹起来
 
 <keep-alive>
@@ -242,7 +242,7 @@ vertival-align:sub
 .self
 .once
 
-```
+```html
 <!-- 阻止单击事件冒泡 -->
 <a v-on:click.stop="doThis"></a>
 <!-- 提交事件不再重载页面 -->

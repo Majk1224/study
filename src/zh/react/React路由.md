@@ -2,7 +2,7 @@
 ##### 路由模式(2种)
 1. hash
  
-```
+```js
 改变地址 -> push     ->  window.location.hash=
          -> replace  -> window.location.replace(url)
 hashchange
@@ -10,7 +10,7 @@ hashchange
 
 2. browser/history
 
-```
+```js
 改变地址 -> pushstate  -> window.history.pushState({}, `这是标题`, this.getAttribute('href'));
         ->  replacestate  -> window.history.replaceState({}, `这是标题`, this.getAttribute('href'));
 popState
@@ -19,7 +19,7 @@ popState
 
 #### 1、react-router-dom
 - web前段用的
-```
+```js
 Switch
 // 只显示匹配的第一个子路由，然后就不往下匹配了
 
@@ -39,22 +39,24 @@ import {
 } from 'react-router-dom';
 
 render(){
-        return <Router>
-                    <Fragment>
-                        <Switch>
-                             // 占位标签，如果path与当前路径匹配，渲染component
-                             // exact表示精准匹配，当path与当前路径一模一样才匹配
-                            <Route exact path="/index" component={()=><h1>我是首页</h1>}/>
-                            <Route path="/taobao" component={()=><h1>我是淘宝</h1>}/>
-                        </Switch>
-                        <footer>
-                            // 导航标签 to属性声明要跳转的路径
-                            <Link to="/index">首页</Link>
-                            <Link to="/taobao">淘宝</Link>
-                            <Redirect exact from="/" to="/index"></Redirect>
-                        </footer>
-                    </Fragment>
+        return (
+            <Router>
+                <Fragment>
+                    <Switch>
+                        // 占位标签，如果path与当前路径匹配，渲染component
+                        // exact表示精准匹配，当path与当前路径一模一样才匹配
+                        <Route exact path="/index" component={()=><h1>我是首页</h1>}/>
+                        <Route path="/taobao" component={()=><h1>我是淘宝</h1>}/>
+                    </Switch>
+                    <footer>
+                        // 导航标签 to属性声明要跳转的路径
+                        <Link to="/index">首页</Link>
+                        <Link to="/taobao">淘宝</Link>
+                        <Redirect exact from="/" to="/index"></Redirect>
+                    </footer>
+                </Fragment>
             </Router>
+        )
     }
 ```
 
@@ -71,7 +73,7 @@ render(){
 - window.history.go(-1)
 - window.history.back()
 
-```
+```js
 <button onClick={()=>{
     window.history.back()
 }}>
@@ -80,7 +82,7 @@ render(){
 ```
 #### 6、路由的封装(一级路由)
 index.js
-```
+```js
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {HashRouter as Router} from 'react-router-dom';
@@ -96,7 +98,7 @@ ReactDOM.render(<Router>
 ```
 react/reactView.jsx
 
-```
+```js
 import React from 'react';
 import {Switch,Route,Redirect} from 'react-router-dom';
 
@@ -121,7 +123,7 @@ export default (props)=>{
 ```
 react/react.config.js
 
-```
+```js
 // 一级路由
 import Tab from '../components/Tab.jsx';
 import Detail from '../components/Detail.jsx';
@@ -159,7 +161,7 @@ export default{
 ```
 components/Tab.js
 
-```
+```js
 import React,{Component} from 'react';
 import {NavLink} from 'react-router-dom';
 

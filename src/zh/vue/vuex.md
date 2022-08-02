@@ -12,7 +12,7 @@ cnpm i vuex -D
 
 （2）建一个store文件夹（store/index.js）
 
-```
+```js
 // 初始化vuex
 
 import Vue from 'vue';
@@ -32,7 +32,7 @@ export default new Vuex.Store({
 ```
 （3）在store文件夹里建一个module文件夹用来存放数据（store/module/app.js）
 
-```
+```js
 // 存放数据的地方
 const state = {
   num: 100
@@ -73,7 +73,7 @@ export default {
 ```
 （4）在main.js里面引入store
 
-```
+```js
 import Vue from 'vue'
 import App from './App.vue'
 
@@ -88,7 +88,7 @@ new Vue({
 ```
 （5）在页面中使用
 
-```
+```js
 <template>
   <div>
     <button @click="changeNum('+')">+</button>

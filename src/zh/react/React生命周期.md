@@ -1,6 +1,6 @@
 # React生命周期
 #### 1、componentDidMount() // 组件挂载完成之后触发的生命周期 相当于vue的mounted
-```
+```js
 componentDidMount(){
     setInterval(()=>{
         // 修改state的唯一方法
@@ -18,19 +18,16 @@ componentDidMount(){
 #### 2、componentWillMount()  // 组件挂载之前 相当于vue的beforeMount
 #### 3、componentWillReceiveProps(nextProps)  // 组件将要接收新的props vue没有
 
-```
+```js
 // 和props相关的唯一一个生命周期
 // 执行完成之后，this.props指向新的props
 componentWillReceiveProps(nextProps){
     // 旧的props   this.props
     // 新的props   nextProps
-    
 }
-
-
 ```
 #### 4、shouldComponentUpdate(nextProps,nextState)  // 通过返回值判断组件是否需要更新,用于react优化，vue没有 true更新，false不更新
-```
+```js
 shouldComponentUpdate(nextProps,nextState){
     // 旧的props   this.props
     // 新的props   nextProps
@@ -45,13 +42,13 @@ shouldComponentUpdate(nextProps,nextState){
 #### 6、componentDidUpdate // 组件更新完成 相当于vue的updated
 #### 7、componentWillUnmount() // 组件将要卸载
 #### 8、unmountComponentAtNode() // 卸载组件
-```
+```js
 ReactDom.unmountComponentAtNode(document.getElementById('root'))
 ```
 #### 9、分为三个阶段
 1. 实例化阶段
 
-```
+```js
 首次使用一个组件类时会有getDefaultProps
 对于组件类的所有后续应用没有getDefaultProps
 1、getDefaultProps
@@ -63,7 +60,7 @@ ReactDom.unmountComponentAtNode(document.getElementById('root'))
 2. 更新阶段(存在期)
 
 
-```
+```js
 1. componentWillReceiveProps 
 2. shouldComponentUpdate 
 3. componentWillUpdate 
@@ -72,6 +69,6 @@ ReactDom.unmountComponentAtNode(document.getElementById('root'))
 ```
 3. 销毁&清理期
 
-```
+```js
 componentWillUnmount
 ```
