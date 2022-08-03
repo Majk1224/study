@@ -61,6 +61,7 @@ module.exports = {
             text: '项目相关',
             items: [
               { text: '前端规范', link: '/zh/standard/Standard.md'},
+              { text: 'Git规范', link: '/zh/standard/Git.md'},
               { text: '项目流程', link: '/zh/standard/Project.md'},
               { text: '前后端交互', link: '/zh/standard/Cooperation.md'},
               { text: '移动端兼容问题', link: '/zh/standard/Compatibility.md'},
@@ -69,7 +70,8 @@ module.exports = {
               { text: '单页面应用', link: '/zh/standard/Spa.md'},
               { text: '渐进式web应用', link: '/zh/standard/Pwa.md'},
               { text: '网络安全', link: '/zh/standard/Security.md'},
-              // { text: '前端自动化部署', link: '/zh/standard/Deploy.md'},
+              { text: '单元测试', link: '/zh/standard/Jest.md'},
+              { text: '前端自动化部署', link: '/zh/standard/Deploy.md'},
               { text: 'Webpack的loader和plugin', link: '/zh/standard/Webpack.md'},
               
             ],
@@ -79,9 +81,10 @@ module.exports = {
             items: [
               { text: '面试必看', link: '/zh/interview/index.md'},
               { text: '常见面试经', link: '/zh/interview/learnAll.md'},
+              { text: '寒冬三年前端', link: '/zh/interview/threeYear.md'},
+              { text: '前端面试大全', link: '/zh/book/'},
               { text: '阿里巴巴', link: '/zh/interview/ali.md'},
-              { text: '三年前端', link: '/zh/interview/threeYear.md'},
-              // { text: '龙湖地产', link: '/zh/interview/longhu.md'}
+              { text: '龙湖地产', link: '/zh/interview/longhu.md'}
             ]
           },
           {
@@ -93,8 +96,8 @@ module.exports = {
               { text: '小程序', link: '/zh/miniapp/' },
               { text: 'Webpack', link: '/zh/webpack/'},
               { text: 'React Hooks', link: '/zh/standard/Hooks.md'},
-              { text: 'TypeScript 基础用法', link: '/zh/summary/typescript.md'},
-              { text: 'TypeScript 高级用法', link: '/zh/summary/deepTypescript.md'},
+              { text: 'TypeScript', link: '/zh/summary/typescript.md'},
+              // { text: 'TypeScript 高级用法', link: '/zh/summary/deepTypescript.md'},
               // { text: '悦读管理后台', link: '/zh/interface/Yuedu.md'},
               // { text: 'BlackMarket', link: '/zh/interface/BlackMarket.md'},
               // { text: 'TouTiao', link: '/zh/interface/TouTiao.md'}
@@ -119,7 +122,7 @@ module.exports = {
         sidebar: {
           '/guide/': genSidebarConfig('指南'),
           '/zh/ali/': [{title:'阿里面试题'}],
-          '/zh/vue/': [{title: 'Vue知识点', children: [
+          '/zh/vue/': [{title: 'Vue2知识点', children: [
             '', 'Es6', 'Es6方法扩展', 'Webpack', 'Babel', 'Promise', 'Vue 各种方法之间的区别', 'Vue组件', 'Vue路由', 'Vue动画', 'vue钩子函数', 'vuex'
           ]}],
           '/zh/react/': [{title: 'React知识点', children: [
@@ -127,7 +130,10 @@ module.exports = {
           ]}],
           '/zh/miniapp/': [{title: '小程序知识点', children: [
             '', 'WXS', 'wepy组件通信', '小程序事件', '小程序路由', '小程序组件', '小程序组件化'
-          ]}]
+          ]}],
+          '/zh/book/': [{title: '前端面试大全', children: [
+            '', 'HTML篇', 'CSS', 'JavaScript篇', 'Ajax篇', '移动端篇', 'TypeScript篇', 'Webpack篇', 'Vue篇', 'React篇', 'Node篇', '项目篇', '前端术语篇'
+          ]}],
         }
       }
     },
